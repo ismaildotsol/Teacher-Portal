@@ -14,7 +14,7 @@ const SideBar = () => {
       <FaAlignRight
         className={`text-2xl absolute right-3 top-3 cursor-pointer ${
           !open && "rotate-180"
-        }`}
+        } hidden md:block`}
         onClick={() => setOpen(!open)}
       />
 
