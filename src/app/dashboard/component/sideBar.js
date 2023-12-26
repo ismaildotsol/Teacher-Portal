@@ -20,7 +20,7 @@ const SideBar = () => {
 
       <div className="inline-flex">
         <h1
-          className={`text-white p-3 origin-left font-medium text-2xt duration-300 ${
+          className={`text-white p-4 origin-left font-medium text-2xt duration-300 ${
             !open && "scale-0"
           }`}
         >
