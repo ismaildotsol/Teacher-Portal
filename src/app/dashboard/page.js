@@ -1,5 +1,6 @@
 import Navbar from "./component/navBar";
 import Sidebar from "./component/sideBar";
+import Card from "./component/card";
 const Home = () => {
   return (
     <div className="flex ">
@@ -9,6 +10,7 @@ const Home = () => {
 
       <div className="flex-1">
         <Navbar />
+           <Card/>
       </div>
     </div>
   );
