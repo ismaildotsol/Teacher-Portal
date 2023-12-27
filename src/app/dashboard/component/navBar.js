@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Message Icon */}
         <div className="message">
-          <button className="ml-2 text-blue-500 px-4 py-2 justify-start">
+          <button className="text-blue-500 px-4 py-2 justify-start">
             <TiMessageTyping className="h-6 w-6" />
           </button>
         </div>
