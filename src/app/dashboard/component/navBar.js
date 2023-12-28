@@ -41,7 +41,7 @@ const Navbar = () => {
             alt="User"
             className="w-8 h-8 rounded-full"
           />
-          <span className="sm:flex text-black ml-2">John Doe</span>
+          <span className="sm:flex text-black ml-2">DBSL</span>
         </div>
       </div>
     </nav>
