@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { FaAlignRight } from "react-icons/fa6";
 import Menu from "./menu";
+import { TbLayoutDashboard } from 'react-icons/tb';
+import { IoBookmarksOutline } from 'react-icons/io5';
+import { TiMessageTyping } from 'react-icons/ti';
 
+// Update the SideBar component
 const SideBar = () => {
   const [open, setOpen] = useState(true);
 
@@ -43,13 +47,23 @@ const SideBar = () => {
         </h1>
       </div>
 
-      <div className={`text-white p-4 origin-left font-medium text-2xt duration-300 ${
-        !open && "scale-0"
-      }`}>
-        <Menu />
-      </div>
+      {/* Conditionally render either the full menu or just the icons */}
+      {open ? (
+        <div className={`text-white p-4 origin-left font-medium text-2xt duration-300`}>
+          <Menu />
+        </div>
+      ) : (
+        <div className="flex flex-col items-center justify-center">
+          {/* Render only icons when sidebar is closed */}
+          <TbLayoutDashboard className="text-3xl text-gray-200 cursor-pointer my-4" />
+          <IoBookmarksOutline className="text-3xl text-gray-200 cursor-pointer my-4" />
+          <TiMessageTyping className="text-3xl text-gray-200 cursor-pointer my-4" />
+          {/* Add other icons as needed */}
+        </div>
+      )}
     </div>
   );
 };
+
 
 export default SideBar;
