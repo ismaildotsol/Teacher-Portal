@@ -1,15 +1,22 @@
+// Navbar.js
 import React from "react";
 import { CiSearch } from "react-icons/ci";
+import { FaAlignRight } from "react-icons/fa6";
 import { MdOutlineCircleNotifications } from "react-icons/md";
 import { TiMessageTyping } from "react-icons/ti";
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
   return (
     <nav className="bg-grey-300 border p-4 mb-4 flex flex-col md:flex-row justify-between">
       <div className="flex items-center">
-
+        <button
+          className="ml-2 text-blue-500 px-4 py-2 md:hidden"
+          onClick={toggleSidebar}
+        >
+          <FaAlignRight className="h-6 w-6" />
+        </button>
         <div className="flex items-center">
-          <button className="ml-2 text-blue-500 px-4 py-2">
+          <button className="ml-2 text-blue-500 px-4 py-2 md:hidden">
             <CiSearch className="h-6 w-6" />
           </button>
           <input
@@ -21,20 +28,17 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center space-x-2 md:space-x-4">
-
         <div className="notification">
           <button className="ml-2 text-blue-500 px-4 py-2 justify-start">
             <MdOutlineCircleNotifications className="h-6 w-6" />
           </button>
         </div>
-
         {/* Message Icon */}
         <div className="message">
           <button className="text-blue-500 px-4 py-2 justify-start">
             <TiMessageTyping className="h-6 w-6" />
           </button>
         </div>
-
         <div className="flex items-center">
           <img
             src="user-image.jpg"

@@ -7,7 +7,7 @@ import { IoBookmarksOutline } from 'react-icons/io5';
 import { TiMessageTyping } from 'react-icons/ti';
 
 // Update the SideBar component
-const SideBar = () => {
+const SideBar = ({ isOpen }) => {
   const [open, setOpen] = useState(true);
 
   useEffect(() => {
